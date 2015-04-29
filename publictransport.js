@@ -4,16 +4,19 @@ var PublicTransport = (function () {
     createInstance = function () {
       return {
         addListener: function (event, handler) {
+          if (listeners[event] === undefined || listeners[event] === null) {
+            listeners[event] = [];
+          }
           listeners[event].push(handler);
         },
-        fire: function (event, properties) {
-          listeners.forEach(function (handler) {
+        dispatch: function (event, properties) {
+          listeners[event].forEach(function (handler) {
             handler.handle(properties);
           });
         },
         removeListener: function (event, handler) {
           var index = listeners[event].indexOf(handler);
-          listeners.splice(index, 1);
+          listeners[event].splice(index, 1);
         }
       };
     };
