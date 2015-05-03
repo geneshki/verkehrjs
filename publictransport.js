@@ -15,8 +15,18 @@ var PublicTransport = (function () {
           });
         },
         removeListener: function (event, handler) {
-          var index = listeners[event].indexOf(handler);
-          listeners[event].splice(index, 1);
+          var index = listeners[event].indexOf(handler),
+            garbage;
+          debugger;
+          if (index >= 0) {
+            garbage = listeners[event].splice(index, 1);
+          } else {
+            console.log("no such handler attached");
+          }
+          return garbage;
+        },
+        removeAllListeners: function () {
+          listeners = {};
         }
       };
     };
