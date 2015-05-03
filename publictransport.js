@@ -24,7 +24,6 @@ var PublicTransport = (function () {
         removeListener: function (event, handler) {
           var index = listeners[event].indexOf(handler),
             garbage;
-          debugger;
           if (index >= 0) {
             garbage = listeners[event].splice(index, 1);
           } else {
