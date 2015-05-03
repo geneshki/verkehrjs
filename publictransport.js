@@ -1,3 +1,10 @@
+/**
+ *  A minimalistic Event Bus library.
+ *  version 1.0
+ *
+ *  The MIT License (MIT)
+ *  Copyright (c) 2015 insignificantMe
+ */
 var PublicTransport = (function () {
   var instance,
     listeners = {},
