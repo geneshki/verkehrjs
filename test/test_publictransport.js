@@ -3,7 +3,7 @@ QUnit.test( "public transport is a singleton", function( assert ) {
   assert.deepEqual(PublicTransport.getInstance(), PublicTransport.getInstance(), "the bus is only one!");
 });
 QUnit.test("public transport is not null", function (assert) {
-  assert.notEqual(PublicTransport.getInstance(), null, "The bus is existent");
+  assert.notEqual(PublicTransport.getInstance(), null, "The bus is present");
 });
 
 QUnit.module("Public Transport capabilities", {
