@@ -5,7 +5,7 @@
  *  The MIT License (MIT)
  *  Copyright (c) 2015 insignificantMe
  */
-var PublicTransport = (function () {
+var Verkehr = (function () {
   var  createInstance = function () {
     var listeners = {};
       return {
